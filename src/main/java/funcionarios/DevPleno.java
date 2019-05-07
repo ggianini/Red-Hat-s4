@@ -1,6 +1,6 @@
 package funcionarios;
 
-public class DevPleno {
+public class DevPleno extends Dev {
 
 	public void orientarJr() {
 		System.out.println();
