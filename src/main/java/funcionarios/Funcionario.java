@@ -5,30 +5,55 @@ import java.util.List;
 public abstract class Funcionario {
 	//atributos
 	protected String nome;
-	protected String sobrenome;
+	protected String sobreNome;
+	protected String endereço;
 	protected String tel;
 	protected String cel;
 	protected double salario;
 	protected List<String> dependentes;
+	protected boolean ocupado;
+	protected String orientando;
 	//metodos
 	void aumentaSalario(double quantidade) {
-		this.salario	+=	quantidade;
+		this.salario += quantidade;
 	}
 	//gets
-	public	String	getnome() {
+	public String getNome() {
 		return this.nome;
 	}
-	public	String	getsobrenome() {
-		return this.sobrenome;
+	public String getSobrenome() {
+		return this.sobreNome;
 	}
-	public	String	gettel() {
+	public String getEndereço() {
+		return this.endereço;
+	}
+	public String getTel() {
 		return this.tel;
 	}
-	public	String	getcel() {
+	public String getCel() {
 		return this.cel;
 	}
-	public	double	getsalario() {
+	public double getSalario() {
 		return this.salario;
 	}
+	public List<String> getDependentes() {
+		return this.dependentes;
+	}
 	//sets
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public void setSobreNome(String sobreNome) {
+		this.sobreNome = sobreNome;
+	}
+	public void setEndereço(String endereço) {
+		this.endereço = endereço;
+	}
+	public void setTel(String tel) {
+		this.tel = tel;
+	}
+	public void setCel(String cel) {
+		this.cel = cel;
+	}
+
 }
