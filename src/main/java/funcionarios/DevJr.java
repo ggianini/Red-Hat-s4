@@ -4,26 +4,26 @@ public class DevJr extends Dev {
 
 	//Construtor
    DevJr(String nome, String sobreNome, double salario){
-	    this.nome = nome;
-		this.sobreNome = sobreNome;
-		this.salario = salario;
+		this.setNome(nome);
+		this.setNome(sobreNome);
+		this.setSalario(salario);
 	}
 
 	public void pedirAjuda(Funcionario fun) {
 		if ((fun.ocupado == false) && (this.ocupado == false)){
 			this.ocupado = true;
 			fun.ocupado = true;
-			fun.orientando = this.nome;
-			System.out.println(this.nome+" está pedindo ajuda para: "+fun.nome+" que estava livre e passou a orientá-lo.");
+			fun.setOrientando(this.getNome());
+			System.out.println(this.getNome()+" está pedindo ajuda para: "+fun.getNome()+" que estava livre e passou a orientá-lo.");
 		}
 		else if ((fun.ocupado = false) && (this.ocupado = true)) {
-			System.out.println(this.nome+", você já está ocupado, não pode pedir ajuda.");
+			System.out.println(this.getNome()+", você já está ocupado, não pode pedir ajuda.");
 		}
 		else if ((fun.ocupado = true) && (this.ocupado = false)) {
-			System.out.println(fun.nome+" não pode te ajudar, pois já está ocupado.");
+			System.out.println(fun.getNome()+" não pode te ajudar, pois já está ocupado.");
 		}
 		else if ((fun.ocupado = true) && (this.ocupado = true)) {
-			System.out.println(this.nome+", você já está ocupado, além disso "+ fun.nome+" não pode te ajudar pois já está ocupado.");
+			System.out.println(this.getNome()+", você já está ocupado, além disso "+ fun.getNome()+" não pode te ajudar pois já está ocupado.");
 		}
 		else {
 			System.out.println("test error");
@@ -31,14 +31,14 @@ public class DevJr extends Dev {
 	}
 	
 	public void pararAjuda(Funcionario Fun) {
-		if ((Fun.ocupado == true) && (this.ocupado == true) && (this.orientando == Fun.nome)){
-			System.out.println(this.nome+" não está mais orientando: "+Fun.nome);
+		if ((Fun.ocupado == true) && (this.ocupado == true) && (this.getOrientando() == Fun.getNome())){
+			System.out.println(this.getNome()+" não está mais orientando: "+Fun.getNome());
 			this.ocupado = false;
 			Fun.ocupado = false;
-			this.orientando = null;
+			this.setOrientando(null);
 		}
 		else {
-			System.out.println(this.nome+", você não está mais sendo ajudado por "+Fun.nome);
+			System.out.println(this.getNome()+", você não está mais sendo ajudado por "+Fun.getNome());
 		}
 	}
 	
