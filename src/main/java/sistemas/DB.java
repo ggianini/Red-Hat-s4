@@ -1,17 +1,15 @@
 package sistemas;
-
 import java.util.ArrayList;
 
+import funcionarios.DevJr;
+import funcionarios.DevPleno;
 import funcionarios.Gerente;
+import funcionarios.Supervisor;
 
 public class DB {
-	
-	ArrayList<funcionarios.Gerente> Gerentes = new ArrayList<funcionarios.Gerente>();
-	ArrayList<funcionarios.Supervisor> Supervisores = new ArrayList<funcionarios.Supervisor>();
-	ArrayList<funcionarios.DevPleno> DevPlenos = new ArrayList<funcionarios.DevPleno>();
-	ArrayList<funcionarios.DevJr> DevJrs = new ArrayList<funcionarios.DevJr>();
-	
-    Gerente gerente = new Gerente("a", "v", 1);
-    Gerentes.add(gerente);
-	
+	public ArrayList<Gerente> gerenteList = new ArrayList<Gerente>();
+	public ArrayList<Supervisor> supervisorList = new ArrayList<Supervisor>();
+	public ArrayList<DevPleno> devplenoList = new ArrayList<DevPleno>();
+	public ArrayList<DevJr> devjrList = new ArrayList<DevJr>();
+
 }

@@ -4,10 +4,13 @@ public class DevJr extends Dev {
 
  //Construtor
  public DevJr(String nome, String sobreNome, double salario) {
-  System.out.println("Dev Júnior Criado!");
+  System.out.println("-------------------------------------\nDev Júnior Criado!\n");
   this.setNome(nome);
   this.setSobreNome(sobreNome);
   this.setSalario(salario);
+  System.out.println("Nome: " + this.getNome()+"\n");
+  System.out.println("Sobrenome: " + this.getSobreNome()+"\n");
+  System.out.println("Salário: " + this.getSalario()+"\n-------------------------------------\n");
  }
 
  public void pedirAjuda(Funcionario fun) {

@@ -1,6 +1,7 @@
 package funcionarios;
 
 import sistemas.Menus;
+import sistemas.DB;
 
 public class Main {
 
@@ -8,7 +9,6 @@ public class Main {
 		
 		Menus menu = new Menus();
 		menu.menuinicial();
-		
 	}
 }
 

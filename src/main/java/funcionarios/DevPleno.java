@@ -4,12 +4,15 @@ import sistemas.Orientacao;
 
 public class DevPleno extends Dev implements Orientacao {
 
- public DevPleno(String nome, String sobreNome, double salario) {
-  System.out.println("Dev Pleno Criado!");
-  this.setNome(nome);
-  this.setSobreNome(sobreNome);
-  this.setSalario(salario);
- }
+	 public DevPleno(String nome, String sobreNome, double salario) {
+		  System.out.println("-------------------------------------\nDev Pleno Criado!\n");
+		  this.setNome(nome);
+		  this.setSobreNome(sobreNome);
+		  this.setSalario(salario);
+		  System.out.println("Nome: " + this.getNome()+"\n");
+		  System.out.println("Sobrenome: " + this.getSobreNome()+"\n");
+		  System.out.println("Salário: " + this.getSalario()+"\n-------------------------------------\n");
+		 }
 
  public void passarTarefa(DevJr devjr) {
   if ((devjr.ocupado == false) && (this.ocupado == false)) {
