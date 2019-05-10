@@ -2,7 +2,6 @@ package funcionarios;
 
 public class DevJr extends Dev {
 
- //Construtor
  public DevJr(String nome, String sobreNome, double salario) {
   System.out.println("-------------------------------------\nDev Júnior Criado!\n");
   this.setNome(nome);
