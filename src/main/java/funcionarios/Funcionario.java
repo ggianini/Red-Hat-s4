@@ -3,7 +3,7 @@ package funcionarios;
 import java.util.List;
 
 public abstract class Funcionario {
-	//atributos
+
 	private String nome;
 	private String sobreNome;
 	private String endereço;
@@ -18,9 +18,6 @@ public abstract class Funcionario {
 	private String orientando;
 	private String atarefando;
 
-	//metodos
-
-	//gets
 	public String getNome() {
 		return this.nome;
 	}
@@ -61,7 +58,6 @@ public abstract class Funcionario {
 	public List<String> getDependentes() {
 		return dependentes;
 	}
-	//sets
 	public void setNome(String nome) {
 		this.nome = nome;
 	}

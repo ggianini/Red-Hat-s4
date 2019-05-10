@@ -3,22 +3,27 @@ package funcionarios;
 import java.util.List;
 
 public abstract class Dev extends Funcionario {
-	//atributos
-	protected String setor;
-	protected String equipe;
-	protected List<String> linguagens;
-	//gets
-	public	String	getSetor() {
-		return this.setor;
+
+	private String setor;
+	private String equipe;
+	private List<String> linguagens;
+	public String getSetor() {
+		return setor;
 	}
-	public String getEquipe()  {
-		return this.equipe;
+	public String getEquipe() {
+		return equipe;
 	}
-	//sets
-	public	void	getSetor(String setor) {
+	public List<String> getLinguagens() {
+		return linguagens;
+	}
+	public void setSetor(String setor) {
 		this.setor = setor;
 	}
-	public void getEquipe(String equipe)  {
+	public void setEquipe(String equipe) {
 		this.equipe = equipe;
 	}
+	public void setLinguagens(List<String> linguagens) {
+		this.linguagens = linguagens;
+	}
 }
+
