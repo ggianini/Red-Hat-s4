@@ -1,8 +1,12 @@
 package funcionarios;
 
+import java.util.List;
+
 import sistemas.Orientacao;
 
 public class DevPleno extends Dev implements Orientacao {
+	
+	protected List<String> linguagens;
 
 	 public DevPleno(String nome, String sobreNome, double salario) {
 		  System.out.println("-------------------------------------\nDev Pleno Criado!\n");

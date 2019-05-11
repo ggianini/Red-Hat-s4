@@ -1,19 +1,19 @@
 package funcionarios;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public abstract class Funcionario {
 	
 	private String nome;
 	private String sobreNome;
+	private double salario;
 	private String endereço;
 	private boolean auth;
 	private String tel;
 	private String cel;
 	private String senha;
 	private static String senhadegestao = "secret";
-	private double salario;
-	protected ArrayList<String> dependentes;
+	protected List<String> dependentes;
 	protected boolean ocupado;
 	private String orientando;
 	private String atarefando;
@@ -55,7 +55,7 @@ public abstract class Funcionario {
 	public boolean isOcupado() {
 		return ocupado;
 	}
-	public ArrayList<String> getDependentes() {
+	public List<String> getDependentes() {
 		return dependentes;
 	}
 	public void setNome(String nome) {
@@ -92,7 +92,7 @@ public abstract class Funcionario {
 	public void setOcupado(boolean ocupado) {
 		this.ocupado = ocupado;
 	}
-	public void setDependentes(ArrayList<String> dependentes) {
-		this.dependentes = dependentes;
+	public void setDependentes(List<String> gerentedpendentesList) {
+		this.dependentes = gerentedpendentesList;
 	}
 }

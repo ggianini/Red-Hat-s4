@@ -1,7 +1,20 @@
 package funcionarios;
 
+import java.util.List;
+
 public class DevJr extends Dev {
 
+	protected List<String> linguagens;
+	
+	public List<String> getLinguagens() {
+		return linguagens;
+	}
+
+	public void setLinguagens(List<String> linguagens) {
+		this.linguagens = linguagens;
+	}
+	
+	
  public DevJr(String nome, String sobreNome, double salario) {
   System.out.println("-------------------------------------\nDev Júnior Criado!\n");
   this.setNome(nome);
