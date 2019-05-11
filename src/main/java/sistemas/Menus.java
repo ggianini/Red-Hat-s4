@@ -42,9 +42,9 @@ public class Menus {
     this.menuinicial();
     break;
    case "5":
-	   this.painelbuscar();
-	   this.menubuscar();
-	   this.menuinicial();
+    this.painelbuscar();
+    this.menubuscar();
+    this.menuinicial();
    case "9":
     System.out.println("Obrigado por usar o nosso sistema!...\n\n Saindo...");
     System.exit(0);
@@ -55,7 +55,7 @@ public class Menus {
  }
 
  public void painelinicial() {
-     System.out.println("-------------------------------------");
+  System.out.println("-------------------------------------");
   System.out.println("\nEsse é o painel do administrador\nSelecione a opção desejada");
   System.out.println("-------------------------------------");
   System.out.println("1 - Criar Funcionário");
@@ -99,17 +99,17 @@ public class Menus {
   System.out.println("2 - Listar Supervisores");
   System.out.println("3 - Listar Devs Plenos");
   System.out.println("4 - Listar Devs Júniors");
-  System.out.println("5 - Listar Todos");//AQ
+  System.out.println("5 - Listar Todos"); //AQ
   System.out.println("9 - Voltar");
  }
  public void painelbuscar() {
-	  System.out.println("Qual o cargo do Funcionário?");
-	  System.out.println("1 - Buscar Gerente");
-	  System.out.println("2 - Buscar Supervisore");
-	  System.out.println("3 - Buscar Dev Pleno");
-	  System.out.println("4 - Buscar Dev Júnior");
-	  System.out.println("9 - Voltar");
-	 }
+  System.out.println("Qual o cargo do Funcionário?");
+  System.out.println("1 - Buscar Gerente");
+  System.out.println("2 - Buscar Supervisore");
+  System.out.println("3 - Buscar Dev Pleno");
+  System.out.println("4 - Buscar Dev Júnior");
+  System.out.println("9 - Voltar");
+ }
 
  public void menucriar() {
   String menucriar = scan.nextLine();
@@ -177,10 +177,10 @@ public class Menus {
     DevJr devjr = new DevJr(devjrnome, devjrsobrenome, devjrsalario);
     db.devjrList.add(devjr);
     break;
-    
+
    case "9":
-    
-	this.menuinicial();
+
+    this.menuinicial();
    default:
     System.out.println("\nVALOR DIGITADO É INVÁLIDO!!\nTENTE NOVAMENTE\n");
     this.painelcriar();
@@ -267,30 +267,22 @@ public class Menus {
      if (db.gerenteList.get(i).getNome().equals(gerentenome)) {
       if (gerenteatributo.equals("nome")) {
        db.gerenteList.get(i).setNome(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("sobrenome")) {
+      } else if (gerenteatributo.equals("sobrenome")) {
        db.gerenteList.get(i).setSobreNome(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("salario")) {
+      } else if (gerenteatributo.equals("salario")) {
        db.gerenteList.get(i).setSalario(Double.parseDouble(gerentevaloratributo));
-      } 
-      else if (gerenteatributo.equals("endereço")) {
+      } else if (gerenteatributo.equals("endereço")) {
        db.gerenteList.get(i).setEndereço(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("tel")) {
+      } else if (gerenteatributo.equals("tel")) {
        db.gerenteList.get(i).setTel(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("cel")) {
+      } else if (gerenteatributo.equals("cel")) {
        db.gerenteList.get(i).setCel(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("senha")) {
+      } else if (gerenteatributo.equals("senha")) {
        db.gerenteList.get(i).setSenha(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("cel")) {
+      } else if (gerenteatributo.equals("cel")) {
        db.gerenteList.get(i).setCel(gerentevaloratributo);
-      } 
-      else if (gerenteatributo.equals("dependentes")) {    	  
-    	  List<String> gerentedependentesList = Arrays.asList(gerentevaloratributo.split("\\s*,\\s*"));
+      } else if (gerenteatributo.equals("dependentes")) {
+       List < String > gerentedependentesList = Arrays.asList(gerentevaloratributo.split("\\s*,\\s*"));
        db.gerenteList.get(i).setDependentes(gerentedependentesList);
       }
      }
@@ -310,31 +302,23 @@ public class Menus {
      if (db.supervisorList.get(i).getNome().equals(supervisornome)) {
       if (supervisoratributo.equals("nome")) {
        db.supervisorList.get(i).setNome(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("sobrenome")) {
+      } else if (supervisoratributo.equals("sobrenome")) {
        db.supervisorList.get(i).setSobreNome(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("salario")) {
+      } else if (supervisoratributo.equals("salario")) {
        db.supervisorList.get(i).setSalario(Double.parseDouble(supervisorvaloratributo));
-      } 
-      else if (supervisoratributo.equals("endereço")) {
+      } else if (supervisoratributo.equals("endereço")) {
        db.supervisorList.get(i).setEndereço(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("tel")) {
+      } else if (supervisoratributo.equals("tel")) {
        db.supervisorList.get(i).setTel(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("cel")) {
+      } else if (supervisoratributo.equals("cel")) {
        db.supervisorList.get(i).setCel(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("senha")) {
+      } else if (supervisoratributo.equals("senha")) {
        db.supervisorList.get(i).setSenha(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("cel")) {
+      } else if (supervisoratributo.equals("cel")) {
        db.supervisorList.get(i).setCel(supervisorvaloratributo);
-      } 
-      else if (supervisoratributo.equals("dependentes")) {
-    	  
-    	  List<String> supervisordependentesList = Arrays.asList(supervisorvaloratributo.split("\\s*,\\s*"));
+      } else if (supervisoratributo.equals("dependentes")) {
+
+       List < String > supervisordependentesList = Arrays.asList(supervisorvaloratributo.split("\\s*,\\s*"));
 
        db.supervisorList.get(i).setDependentes(supervisordependentesList);
       }
@@ -354,40 +338,31 @@ public class Menus {
      if (db.devplenoList.get(i).getNome().equals(devplenonome)) {
       if (devplenoatributo.equals("nome")) {
        db.devplenoList.get(i).setNome(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("sobrenome")) {
+      } else if (devplenoatributo.equals("sobrenome")) {
        db.devplenoList.get(i).setSobreNome(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("salario")) {
+      } else if (devplenoatributo.equals("salario")) {
        db.devplenoList.get(i).setSalario(Double.parseDouble(devplenovaloratributo));
-      } 
-      else if (devplenoatributo.equals("endereço")) {
+      } else if (devplenoatributo.equals("endereço")) {
        db.devplenoList.get(i).setEndereço(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("tel")) {
+      } else if (devplenoatributo.equals("tel")) {
        db.devplenoList.get(i).setTel(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("cel")) {
+      } else if (devplenoatributo.equals("cel")) {
        db.devplenoList.get(i).setCel(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("senha")) {
+      } else if (devplenoatributo.equals("senha")) {
        db.devplenoList.get(i).setSenha(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("cel")) {
+      } else if (devplenoatributo.equals("cel")) {
        db.devplenoList.get(i).setCel(devplenovaloratributo);
-      } 
-      else if (devplenoatributo.equals("dependentes")) {
-    	  
-    	  List<String> devplenodependentesList = Arrays.asList(devplenovaloratributo.split("\\s*,\\s*"));
+      } else if (devplenoatributo.equals("dependentes")) {
+
+       List < String > devplenodependentesList = Arrays.asList(devplenovaloratributo.split("\\s*,\\s*"));
 
        db.devplenoList.get(i).setDependentes(devplenodependentesList);
-      }
-      else if (devplenoatributo.equals("linguagens")) {
-    	  
-    		List<String> devplenolinguagensList = Arrays.asList(devplenovaloratributo.split("\\s*,\\s*"));
+      } else if (devplenoatributo.equals("linguagens")) {
 
-    	 db.devplenoList.get(i).setLinguagens(devplenolinguagensList);
-    	}
+       List < String > devplenolinguagensList = Arrays.asList(devplenovaloratributo.split("\\s*,\\s*"));
+
+       db.devplenoList.get(i).setLinguagens(devplenolinguagensList);
+      }
 
      }
     }
@@ -406,41 +381,31 @@ public class Menus {
      if (db.devjrList.get(i).getNome().equals(devjrnome)) {
       if (devjratributo.equals("nome")) {
        db.devjrList.get(i).setNome(devjrvaloratributo);
-      } 
-      else if (devjratributo.equals("sobrenome")) {
+      } else if (devjratributo.equals("sobrenome")) {
        db.devjrList.get(i).setSobreNome(devjrvaloratributo);
-      }
-      else if (devjratributo.equals("salario")) {
+      } else if (devjratributo.equals("salario")) {
        db.devjrList.get(i).setSalario(Double.parseDouble(devjrvaloratributo));
-      }
-      else if (devjratributo.equals("endereço")) {
+      } else if (devjratributo.equals("endereço")) {
        db.devjrList.get(i).setEndereço(devjrvaloratributo);
-      }
-      else if (devjratributo.equals("tel")) {
+      } else if (devjratributo.equals("tel")) {
        db.devjrList.get(i).setTel(devjrvaloratributo);
-      }
-      else if (devjratributo.equals("cel")) {
+      } else if (devjratributo.equals("cel")) {
        db.devjrList.get(i).setCel(devjrvaloratributo);
-      }
-      
-      else if (devjratributo.equals("senha")) {
+      } else if (devjratributo.equals("senha")) {
        db.devjrList.get(i).setSenha(devjrvaloratributo);
-      } 
-      else if (devjratributo.equals("cel")) {
+      } else if (devjratributo.equals("cel")) {
        db.devjrList.get(i).setCel(devjrvaloratributo);
-      } 
-      else if (devjratributo.equals("dependentes")) {
-    	  
-    	  List<String> devjrdependentesList = Arrays.asList(devjrvaloratributo.split("\\s*,\\s*"));
+      } else if (devjratributo.equals("dependentes")) {
+
+       List < String > devjrdependentesList = Arrays.asList(devjrvaloratributo.split("\\s*,\\s*"));
 
        db.devjrList.get(i).setDependentes(devjrdependentesList);
-      }
-      else if (devjratributo.equals("linguagens")) {
-    	  
-  		List<String> devjrlinguagensList = Arrays.asList(devjrvaloratributo.split("\\s*,\\s*"));
+      } else if (devjratributo.equals("linguagens")) {
 
-  	 db.devjrList.get(i).setLinguagens(devjrlinguagensList);
-  	}
+       List < String > devjrlinguagensList = Arrays.asList(devjrvaloratributo.split("\\s*,\\s*"));
+
+       db.devjrList.get(i).setLinguagens(devjrlinguagensList);
+      }
      }
     }
     break;
@@ -455,7 +420,7 @@ public class Menus {
  }
 
  @SuppressWarnings("rawtypes")
-public void menulistar() {
+ public void menulistar() {
   Iterator gerenteitr = db.gerenteList.iterator();
   Iterator supervisoritr = db.supervisorList.iterator();
   Iterator devplenoitr = db.devplenoList.iterator();
@@ -463,196 +428,290 @@ public void menulistar() {
   String menulistar = scan.nextLine();
 
   switch (menulistar) {
-  
+
    case "1":
-	   System.out.println("-------------------------------------\nGerentes: ");
+    System.out.println("-------------------------------------\nGerentes: ");
     while (gerenteitr.hasNext()) {
      Gerente showgerente = (Gerente) gerenteitr.next();
      System.out.println("-------------------------------------");
-     System.out.println("Nome: " +showgerente.getNome() + " " + showgerente.getSobreNome());
+     System.out.println("Nome: " + showgerente.getNome() + " " + showgerente.getSobreNome());
      System.out.println("\nSalário: " + showgerente.getSalario());
-     //if (showgerente.getEndereço() !=null)
-     System.out.println("\nEndereço: " + showgerente.getEndereço());
-     //if (showgerente.getTel() != null)
-     System.out.println("\nTelefone: " + showgerente.getTel());
-     //if (showgerente.getCel() !=null)
-     System.out.println("\nCelular: " + showgerente.getCel());
-     //if (showgerente.getSenha() !=null)
-     System.out.println("\nSenha: " + showgerente.getSenha());
-     //if (showgerente.getDependentes() !=null)
-     System.out.println("\nDependentes: "+showgerente.getDependentes());
-	  }
+     if (showgerente.getEndereço() != null)
+      System.out.println("\nEndereço: " + showgerente.getEndereço());
+     if (showgerente.getTel() != null)
+      System.out.println("\nTelefone: " + showgerente.getTel());
+     if (showgerente.getCel() != null)
+      System.out.println("\nCelular: " + showgerente.getCel());
+     if (showgerente.getSenha() != null)
+      System.out.println("\nSenha: " + showgerente.getSenha());
+     if (showgerente.getDependentes() != null)
+      System.out.println("\nDependentes: " + showgerente.getDependentes());
+    }
     break;
-    
+
    case "2":
-	   System.out.println("-------------------------------------\nSupervisores: ");
+    System.out.println("-------------------------------------\nSupervisores: ");
     while (supervisoritr.hasNext()) {
      Supervisor showsupervisor = (Supervisor) supervisoritr.next();
      System.out.println("-------------------------------------");
-     System.out.println("Nome: " +showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
+     System.out.println("Nome: " + showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
      System.out.println("\nSalário: " + showsupervisor.getSalario());
-     System.out.println("\nDependentes: "+showsupervisor.getDependentes());
+     if (showsupervisor.getEndereço() != null)
+      System.out.println("\nEndereço: " + showsupervisor.getEndereço());
+     if (showsupervisor.getTel() != null)
+      System.out.println("\nTelefone: " + showsupervisor.getTel());
+     if (showsupervisor.getCel() != null)
+      System.out.println("\nCelular: " + showsupervisor.getCel());
+     if (showsupervisor.getSenha() != null)
+      System.out.println("\nSenha: " + showsupervisor.getSenha());
+     if (showsupervisor.getDependentes() != null)
+      System.out.println("\nDependentes: " + showsupervisor.getDependentes());
     }
     break;
-   
+
    case "3":
-	   System.out.println("-------------------------------------\nDevs Plenos: ");
+    System.out.println("-------------------------------------\nDevs Plenos: ");
     while (devplenoitr.hasNext()) {
      DevPleno showdevpleno = (DevPleno) devplenoitr.next();
      System.out.println("-------------------------------------");
-     System.out.println("Nome: " +showdevpleno.getNome() + " " + showdevpleno.getSobreNome());
+     System.out.println("Nome: " + showdevpleno.getNome() + " " + showdevpleno.getSobreNome());
      System.out.println("\nSalário: " + showdevpleno.getSalario());
-     System.out.println("\nDependentes: "+showdevpleno.getDependentes());
-     System.out.println("\nLinguagens: "+showdevpleno.getLinguagens());
+     if (showdevpleno.getEndereço() != null)
+      System.out.println("\nEndereço: " + showdevpleno.getEndereço());
+     if (showdevpleno.getTel() != null)
+      System.out.println("\nTelefone: " + showdevpleno.getTel());
+     if (showdevpleno.getCel() != null)
+      System.out.println("\nCelular: " + showdevpleno.getCel());
+     if (showdevpleno.getSenha() != null)
+      System.out.println("\nSenha: " + showdevpleno.getSenha());
+     if (showdevpleno.getDependentes() != null)
+      System.out.println("\nDependentes: " + showdevpleno.getDependentes());
     }
     break;
-   
+
    case "4":
-	   System.out.println("-------------------------------------\nDevs Júniores: ");
+    System.out.println("-------------------------------------\nDevs Júniores: ");
     while (devjritr.hasNext()) {
      DevJr showdevjr = (DevJr) devjritr.next();
      System.out.println("-------------------------------------");
-     System.out.println("Nome: " +showdevjr.getNome() + " " + showdevjr.getSobreNome());
+     System.out.println("Nome: " + showdevjr.getNome() + " " + showdevjr.getSobreNome());
      System.out.println("\nSalário: " + showdevjr.getSalario());
-     System.out.println("\nDependentes: "+showdevjr.getDependentes());
-     System.out.println("\nLinguagens: "+showdevjr.getLinguagens());
+     if (showdevjr.getEndereço() != null)
+      System.out.println("\nEndereço: " + showdevjr.getEndereço());
+     if (showdevjr.getTel() != null)
+      System.out.println("\nTelefone: " + showdevjr.getTel());
+     if (showdevjr.getCel() != null)
+      System.out.println("\nCelular: " + showdevjr.getCel());
+     if (showdevjr.getSenha() != null)
+      System.out.println("\nSenha: " + showdevjr.getSenha());
+     if (showdevjr.getDependentes() != null)
+      System.out.println("\nDependentes: " + showdevjr.getDependentes());
     }
     break;
    case "5":
-	   System.out.println("-------------------------------------\nGerentes: ");
-	   while (gerenteitr.hasNext()) {
-		     Gerente showgerente = (Gerente) gerenteitr.next();
-		     System.out.println("-------------------------------------");
-		     System.out.println("Nome: " +showgerente.getNome() + " " + showgerente.getSobreNome());
-		     System.out.println("\nSalário: " + showgerente.getSalario());
-		     System.out.println("\nDependentes: "+showgerente.getDependentes());
-			  }
-	   System.out.println("-------------------------------------\nSupervisores: ");
-		    while (supervisoritr.hasNext()) {
-		        System.out.println("-------------------------------------");
-		     Supervisor showsupervisor = (Supervisor) supervisoritr.next();
-		     System.out.println("Nome: " +showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
-		     System.out.println("\nSalário: " + showsupervisor.getSalario());
-		     System.out.println("\nDependentes: "+showsupervisor.getDependentes());
-		    }
-		    System.out.println("-------------------------------------\nDevs Plenos: ");
-		    while (devplenoitr.hasNext()) {
-		     DevPleno showdevpleno = (DevPleno) devplenoitr.next();
-		     System.out.println("-------------------------------------");
-		     System.out.println("Nome: " +showdevpleno.getNome() + " " + showdevpleno.getSobreNome());
-		     System.out.println("\nSalário: " + showdevpleno.getSalario());
-		     System.out.println("\nDependentes: "+showdevpleno.getDependentes());
-		     System.out.println("\nLinguagens: "+showdevpleno.getLinguagens());
-		    }
-		    System.out.println("-------------------------------------\nDevs Júniores: ");
-		    while (devjritr.hasNext()) {
-		     DevJr showdevjr = (DevJr) devjritr.next();
-		     System.out.println("-------------------------------------");
-		     System.out.println("Nome: " +showdevjr.getNome() + " " + showdevjr.getSobreNome());
-		     System.out.println("\nSalário: " + showdevjr.getSalario());
-		     System.out.println("\nDependentes: "+showdevjr.getDependentes());
-		     System.out.println("\nLinguagens: "+showdevjr.getLinguagens());
-		    }
-		    break;
+    System.out.println("-------------------------------------\nGerentes: ");
+    while (gerenteitr.hasNext()) {
+     Gerente showgerente = (Gerente) gerenteitr.next();
+     System.out.println("-------------------------------------");
+     System.out.println("Nome: " + showgerente.getNome() + " " + showgerente.getSobreNome());
+     System.out.println("\nSalário: " + showgerente.getSalario());
+     if (showgerente.getEndereço() != null)
+      System.out.println("\nEndereço: " + showgerente.getEndereço());
+     if (showgerente.getTel() != null)
+      System.out.println("\nTelefone: " + showgerente.getTel());
+     if (showgerente.getCel() != null)
+      System.out.println("\nCelular: " + showgerente.getCel());
+     if (showgerente.getSenha() != null)
+      System.out.println("\nSenha: " + showgerente.getSenha());
+     if (showgerente.getDependentes() != null)
+      System.out.println("\nDependentes: " + showgerente.getDependentes());
+    }
+    System.out.println("-------------------------------------\nSupervisores: ");
+    while (supervisoritr.hasNext()) {
+     Supervisor showsupervisor = (Supervisor) supervisoritr.next();
+     System.out.println("-------------------------------------");
+     System.out.println("Nome: " + showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
+     System.out.println("\nSalário: " + showsupervisor.getSalario());
+     if (showsupervisor.getEndereço() != null)
+      System.out.println("\nEndereço: " + showsupervisor.getEndereço());
+     if (showsupervisor.getTel() != null)
+      System.out.println("\nTelefone: " + showsupervisor.getTel());
+     if (showsupervisor.getCel() != null)
+      System.out.println("\nCelular: " + showsupervisor.getCel());
+     if (showsupervisor.getSenha() != null)
+      System.out.println("\nSenha: " + showsupervisor.getSenha());
+     if (showsupervisor.getDependentes() != null)
+      System.out.println("\nDependentes: " + showsupervisor.getDependentes());
+
+    }
+    System.out.println("-------------------------------------\nDevs Plenos: ");
+    while (devplenoitr.hasNext()) {
+     DevPleno showdevpleno = (DevPleno) devplenoitr.next();
+     System.out.println("-------------------------------------");
+     System.out.println("Nome: " + showdevpleno.getNome() + " " + showdevpleno.getSobreNome());
+     System.out.println("\nSalário: " + showdevpleno.getSalario());
+     if (showdevpleno.getEndereço() != null)
+      System.out.println("\nEndereço: " + showdevpleno.getEndereço());
+     if (showdevpleno.getTel() != null)
+      System.out.println("\nTelefone: " + showdevpleno.getTel());
+     if (showdevpleno.getCel() != null)
+      System.out.println("\nCelular: " + showdevpleno.getCel());
+     if (showdevpleno.getSenha() != null)
+      System.out.println("\nSenha: " + showdevpleno.getSenha());
+     if (showdevpleno.getDependentes() != null)
+      System.out.println("\nDependentes: " + showdevpleno.getDependentes());
+    }
+    System.out.println("-------------------------------------\nDevs Júniores: ");
+    while (devjritr.hasNext()) {
+     DevJr showdevjr = (DevJr) devjritr.next();
+     System.out.println("-------------------------------------");
+     System.out.println("Nome: " + showdevjr.getNome() + " " + showdevjr.getSobreNome());
+     System.out.println("\nSalário: " + showdevjr.getSalario());
+     if (showdevjr.getEndereço() != null)
+      System.out.println("\nEndereço: " + showdevjr.getEndereço());
+     if (showdevjr.getTel() != null)
+      System.out.println("\nTelefone: " + showdevjr.getTel());
+     if (showdevjr.getCel() != null)
+      System.out.println("\nCelular: " + showdevjr.getCel());
+     if (showdevjr.getSenha() != null)
+      System.out.println("\nSenha: " + showdevjr.getSenha());
+     if (showdevjr.getDependentes() != null)
+      System.out.println("\nDependentes: " + showdevjr.getDependentes());
+    }
+    break;
    case "9":
-	    
-	this.menuinicial();
+
+    this.menuinicial();
    default:
     System.out.println("\nVALOR DIGITADO É INVÁLIDO!!\nTENTE NOVAMENTE\n");
     this.painellistar();
     this.menulistar();
   }
-  }  
-  
- 
- 
+ }
+
+
  @SuppressWarnings("rawtypes")
-public void menubuscar() {
-	  Iterator gerenteitr = db.gerenteList.iterator();
-	  Iterator supervisoritr = db.supervisorList.iterator();
-	  Iterator devplenoitr = db.devplenoList.iterator();
-	  Iterator devjritr = db.devjrList.iterator();
-	  
-	  String menubuscar = scan.nextLine();
+ public void menubuscar() {
+  Iterator gerenteitr = db.gerenteList.iterator();
+  Iterator supervisoritr = db.supervisorList.iterator();
+  Iterator devplenoitr = db.devplenoList.iterator();
+  Iterator devjritr = db.devjrList.iterator();
 
-	  switch (menubuscar) {
-	  
-	   case "1":
-		   System.out.println("Nome do Gerente a ser buscado: ");
-		    String gerentenome = scan.nextLine();
+  String menubuscar = scan.nextLine();
 
-		    for (int i = 0; i < db.gerenteList.size(); i++) {
-		     if (db.gerenteList.get(i).getNome().equals(gerentenome)) {
-		   System.out.println("-------------------------------------\nDados: ");
-	 
-	     Gerente showgerente = (Gerente) gerenteitr.next();
-	     System.out.println("-------------------------------------");
-	     System.out.println("Nome: " +showgerente.getNome() + " " + showgerente.getSobreNome());
-	     System.out.println("\nSalário: " + showgerente.getSalario());
-	     System.out.println("\nDependentes: "+showgerente.getDependentes());
-		  }
-		     }
-	    break;
-	    
-	   case "2":
-		   System.out.println("Nome do Supervisor a ser buscado: ");
-		    String supervisornome = scan.nextLine();
+  switch (menubuscar) {
 
-		    for (int i = 0; i < db.supervisorList.size(); i++) {
-		     if (db.supervisorList.get(i).getNome().equals(supervisornome)) {
-		   System.out.println("-------------------------------------\nDados: ");
+   case "1":
+    System.out.println("Nome do Gerente a ser buscado: ");
+    String gerentenome = scan.nextLine();
 
-		   Supervisor showsupervisor = (Supervisor) supervisoritr.next();
-		   System.out.println("-------------------------------------");
-		   System.out.println("Nome: " +showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
-		     System.out.println("\nSalário: " + showsupervisor.getSalario());
-		     System.out.println("\nDependentes: "+showsupervisor.getDependentes());
-		    }
-		     }
-		   break;
-		   
-	   case "3":
-		   System.out.println("Nome do Dev Pleno a ser buscado: ");
-		    String devplenonome = scan.nextLine();
+    for (int i = 0; i < db.gerenteList.size(); i++) {
+     if (db.gerenteList.get(i).getNome().equals(gerentenome)) {
+      System.out.println("-------------------------------------\nDados: ");
 
-		    for (int i = 0; i < db.devplenoList.size(); i++) {
-		     if (db.devplenoList.get(i).getNome().equals(devplenonome)) {
-		   System.out.println("-------------------------------------\nDados: ");
+      Gerente showgerente = (Gerente) gerenteitr.next();
+      System.out.println("-------------------------------------");
+      System.out.println("Nome: " + showgerente.getNome() + " " + showgerente.getSobreNome());
+      System.out.println("\nSalário: " + showgerente.getSalario());
+      if (showgerente.getEndereço() != null)
+       System.out.println("\nEndereço: " + showgerente.getEndereço());
+      if (showgerente.getTel() != null)
+       System.out.println("\nTelefone: " + showgerente.getTel());
+      if (showgerente.getCel() != null)
+       System.out.println("\nCelular: " + showgerente.getCel());
+      if (showgerente.getSenha() != null)
+       System.out.println("\nSenha: " + showgerente.getSenha());
+      if (showgerente.getDependentes() != null)
+       System.out.println("\nDependentes: " + showgerente.getDependentes());
+     }
+    }
+    break;
 
-		   DevPleno showdevpleno = (DevPleno) devplenoitr.next();
-		   System.out.println("-------------------------------------");
-		   System.out.println("\nSalário: " + showdevpleno.getSalario());
-		     System.out.println("\nDependentes: "+showdevpleno.getDependentes());
-		     System.out.println("\nLinguagens: "+showdevpleno.getLinguagens());
-		    }
-		     }
-		   break;
-		   
-	   case "4":
-		   System.out.println("Nome do Dev Júnior a ser buscado: ");
-		    String devjrnome = scan.nextLine();
+   case "2":
+    System.out.println("Nome do Supervisor a ser buscado: ");
+    String supervisornome = scan.nextLine();
 
-		    for (int i = 0; i < db.devjrList.size(); i++) {
-		     if (db.devjrList.get(i).getNome().equals(devjrnome)) {
-		   System.out.println("-------------------------------------\nDados: ");
+    for (int i = 0; i < db.supervisorList.size(); i++) {
+     if (db.supervisorList.get(i).getNome().equals(supervisornome)) {
+      System.out.println("-------------------------------------\nDados: ");
 
-		   DevJr showdevjr = (DevJr) devjritr.next();
-		   System.out.println("-------------------------------------");
-		   System.out.println("Nome: " +showdevjr.getNome() + " " + showdevjr.getSobreNome());
-		     System.out.println("\nSalário: " + showdevjr.getSalario());
-		     System.out.println("\nDependentes: "+showdevjr.getDependentes());
-		     System.out.println("\nLinguagens: "+showdevjr.getLinguagens());
-		    }
-		     }
-		   break;
+      Supervisor showsupervisor = (Supervisor) supervisoritr.next();
+      System.out.println("-------------------------------------");
+      System.out.println("Nome: " + showsupervisor.getNome() + " " + showsupervisor.getSobreNome());
+      System.out.println("\nSalário: " + showsupervisor.getSalario());
+      if (showsupervisor.getEndereço() != null)
+       System.out.println("\nEndereço: " + showsupervisor.getEndereço());
+      if (showsupervisor.getTel() != null)
+       System.out.println("\nTelefone: " + showsupervisor.getTel());
+      if (showsupervisor.getCel() != null)
+       System.out.println("\nCelular: " + showsupervisor.getCel());
+      if (showsupervisor.getSenha() != null)
+       System.out.println("\nSenha: " + showsupervisor.getSenha());
+      if (showsupervisor.getDependentes() != null)
+       System.out.println("\nDependentes: " + showsupervisor.getDependentes());
+     }
+    }
+    break;
 
-		   
-	   case "9":
-			this.menuinicial();
-		   default:
-		    System.out.println("\nVALOR DIGITADO É INVÁLIDO!!\nTENTE NOVAMENTE\n");
-		    this.painelbuscar();
-		    this.menubuscar();
-	  }
+   case "3":
+    System.out.println("Nome do Dev Pleno a ser buscado: ");
+    String devplenonome = scan.nextLine();
+
+    for (int i = 0; i < db.devplenoList.size(); i++) {
+     if (db.devplenoList.get(i).getNome().equals(devplenonome)) {
+      System.out.println("-------------------------------------\nDados: ");
+
+      DevPleno showdevpleno = (DevPleno) devplenoitr.next();
+      System.out.println("-------------------------------------");
+      System.out.println("Nome: " + showdevpleno.getNome() + " " + showdevpleno.getSobreNome());
+      System.out.println("\nSalário: " + showdevpleno.getSalario());
+      if (showdevpleno.getEndereço() != null)
+       System.out.println("\nEndereço: " + showdevpleno.getEndereço());
+      if (showdevpleno.getTel() != null)
+       System.out.println("\nTelefone: " + showdevpleno.getTel());
+      if (showdevpleno.getCel() != null)
+       System.out.println("\nCelular: " + showdevpleno.getCel());
+      if (showdevpleno.getSenha() != null)
+       System.out.println("\nSenha: " + showdevpleno.getSenha());
+      if (showdevpleno.getDependentes() != null)
+       System.out.println("\nDependentes: " + showdevpleno.getDependentes());
+     }
+    }
+    break;
+
+   case "4":
+    System.out.println("Nome do Dev Júnior a ser buscado: ");
+    String devjrnome = scan.nextLine();
+
+    for (int i = 0; i < db.devjrList.size(); i++) {
+     if (db.devjrList.get(i).getNome().equals(devjrnome)) {
+      System.out.println("-------------------------------------\nDados: ");
+
+      DevJr showdevjr = (DevJr) devjritr.next();
+      System.out.println("-------------------------------------");
+      System.out.println("Nome: " + showdevjr.getNome() + " " + showdevjr.getSobreNome());
+      System.out.println("\nSalário: " + showdevjr.getSalario());
+      if (showdevjr.getEndereço() != null)
+       System.out.println("\nEndereço: " + showdevjr.getEndereço());
+      if (showdevjr.getTel() != null)
+       System.out.println("\nTelefone: " + showdevjr.getTel());
+      if (showdevjr.getCel() != null)
+       System.out.println("\nCelular: " + showdevjr.getCel());
+      if (showdevjr.getSenha() != null)
+       System.out.println("\nSenha: " + showdevjr.getSenha());
+      if (showdevjr.getDependentes() != null)
+       System.out.println("\nDependentes: " + showdevjr.getDependentes());
+     }
+    }
+    break;
+
+
+   case "9":
+    this.menuinicial();
+   default:
+    System.out.println("\nVALOR DIGITADO É INVÁLIDO!!\nTENTE NOVAMENTE\n");
+    this.painelbuscar();
+    this.menubuscar();
+  }
  }
 }

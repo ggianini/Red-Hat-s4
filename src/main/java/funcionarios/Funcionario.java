@@ -37,7 +37,6 @@ public abstract class Funcionario {
 		return this.cel;
 	}
 	public String getSenha() {
-		System.out.println("email: 'Obrigado por confirmar seus dados, sua senha é: "+this.senha+ "'");
 		return this.senha;
 	}
 	public static String getSenhadegestao() {
