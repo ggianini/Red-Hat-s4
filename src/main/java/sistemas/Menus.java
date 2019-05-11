@@ -9,7 +9,7 @@ import funcionarios.Gerente;
 import funcionarios.Supervisor;
 
 public class Menus {
- DB db = new DB();
+ public DB db = new DB();
 
 
  Scanner scan = new Scanner(System.in);
@@ -108,8 +108,7 @@ public class Menus {
     String gerentesobrenome = scan.nextLine();
 
     System.out.println("Salário do Gerente: ");
-    double gerentesalario = scan.nextDouble();
-    scan.nextLine();
+    double gerentesalario = Double.parseDouble(scan.nextLine());
 
     Gerente gerente = new Gerente(gerentenome, gerentesobrenome, gerentesalario);
     db.gerenteList.add(gerente);
@@ -125,8 +124,7 @@ public class Menus {
     String supervisorsobrenome = scan.nextLine();
 
     System.out.println("Salário do Supervisor: ");
-    double supervisorsalario = scan.nextDouble();
-    scan.nextLine();
+    double supervisorsalario = Double.parseDouble(scan.nextLine());
 
     Supervisor supervisor = new Supervisor(supervisornome, supervisorsobrenome, supervisorsalario);
     db.supervisorList.add(supervisor);
@@ -142,8 +140,7 @@ public class Menus {
     String devplenosobrenome = scan.nextLine();
 
     System.out.println("Salário do Dev Pleno: ");
-    double devplenosalario = scan.nextDouble();
-    scan.nextLine();
+    double devplenosalario = Double.parseDouble(scan.nextLine());
 
     DevPleno devpleno = new DevPleno(devplenonome, devplenosobrenome, devplenosalario);
     db.devplenoList.add(devpleno);
@@ -159,8 +156,7 @@ public class Menus {
     String devjrsobrenome = scan.nextLine();
 
     System.out.println("Salário do Supervisor: ");
-    double devjrsalario = scan.nextDouble();
-    scan.nextLine();
+    double devjrsalario = Double.parseDouble(scan.nextLine());
 
     DevJr devjr = new DevJr(devjrnome, devjrsobrenome, devjrsalario);
     db.devjrList.add(devjr);
@@ -245,56 +241,130 @@ public class Menus {
     String gerentenome = scan.nextLine();
     System.out.println("Atributo do Gerente a ser editado: ");
     String gerenteatributo = scan.nextLine();
-    System.out.println("Novo valor para "+gerenteatributo+": ");
+    System.out.println("Novo valor para " + gerenteatributo + ": ");
     String gerentevaloratributo = scan.nextLine();
+
 
     for (int i = 0; i < db.gerenteList.size(); i++) {
      if (db.gerenteList.get(i).getNome().equals(gerentenome)) {
-      db.gerenteList.remove(i);
-      break;
+      if (gerenteatributo.equals("nome")) {
+       db.gerenteList.get(i).setNome(gerentevaloratributo);
+      } else if (gerenteatributo.equals("sobrenome")) {
+       db.gerenteList.get(i).setSobreNome(gerentevaloratributo);
+      } else if (gerenteatributo.equals("salario")) {
+       db.gerenteList.get(i).setSalario(Double.parseDouble(gerentevaloratributo));
+      } else if (gerenteatributo.equals("endereço")) {
+       db.gerenteList.get(i).setEndereço(gerentevaloratributo);
+      } else if (gerenteatributo.equals("tel")) {
+       db.gerenteList.get(i).setTel(gerentevaloratributo);
+      } else if (gerenteatributo.equals("cel")) {
+       db.gerenteList.get(i).setCel(gerentevaloratributo);
+      } else if (gerenteatributo.equals("senha")) {
+       db.gerenteList.get(i).setSenha(gerentevaloratributo);
+      } else if (gerenteatributo.equals("cel")) {
+       db.gerenteList.get(i).setCel(gerentevaloratributo);
+      } else if (gerenteatributo.equals("dependentes")) {
+       //db.gerenteList.get(i).setDependentes(gerentevaloratributo);
+      }
      }
     }
-
     break;
 
    case "2":
-    System.out.println("Nome do Supervisor a ser deletado: ");
+    System.out.println("Nome do Supervisor a ser editado: ");
     String supervisornome = scan.nextLine();
+    System.out.println("Atributo do Supervisor a ser editado: ");
+    String supervisoratributo = scan.nextLine();
+    System.out.println("Novo valor para " + supervisoratributo + ": ");
+    String supervisorvaloratributo = scan.nextLine();
+
 
     for (int i = 0; i < db.supervisorList.size(); i++) {
      if (db.supervisorList.get(i).getNome().equals(supervisornome)) {
-      db.supervisorList.remove(i);
-      break;
+      if (supervisoratributo.equals("nome")) {
+       db.supervisorList.get(i).setNome(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("sobrenome")) {
+       db.supervisorList.get(i).setSobreNome(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("salario")) {
+       db.supervisorList.get(i).setSalario(Double.parseDouble(supervisorvaloratributo));
+      } else if (supervisoratributo.equals("endereço")) {
+       db.supervisorList.get(i).setEndereço(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("tel")) {
+       db.supervisorList.get(i).setTel(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("cel")) {
+       db.supervisorList.get(i).setCel(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("senha")) {
+       db.supervisorList.get(i).setSenha(supervisorvaloratributo);
+      } else if (supervisoratributo.equals("cel")) {
+       db.supervisorList.get(i).setCel(supervisorvaloratributo);
+      }
      }
     }
-
     break;
-
    case "3":
-    System.out.println("Nome do Dev Pleno a ser deletado: ");
+    System.out.println("Nome do Dev Pleno a ser editado: ");
     String devplenonome = scan.nextLine();
+    System.out.println("Atributo do Dev Pleno a ser editado: ");
+    String devplenoatributo = scan.nextLine();
+    System.out.println("Novo valor para " + devplenoatributo + ": ");
+    String devplenovaloratributo = scan.nextLine();
+
 
     for (int i = 0; i < db.devplenoList.size(); i++) {
      if (db.devplenoList.get(i).getNome().equals(devplenonome)) {
-      db.devplenoList.remove(i);
-      break;
+      if (devplenoatributo.equals("nome")) {
+       db.devplenoList.get(i).setNome(devplenovaloratributo);
+      } else if (devplenoatributo.equals("sobrenome")) {
+       db.devplenoList.get(i).setSobreNome(devplenovaloratributo);
+      } else if (devplenoatributo.equals("salario")) {
+       db.devplenoList.get(i).setSalario(Double.parseDouble(devplenovaloratributo));
+      } else if (devplenoatributo.equals("endereço")) {
+       db.devplenoList.get(i).setEndereço(devplenovaloratributo);
+      } else if (devplenoatributo.equals("tel")) {
+       db.devplenoList.get(i).setTel(devplenovaloratributo);
+      } else if (devplenoatributo.equals("cel")) {
+       db.devplenoList.get(i).setCel(devplenovaloratributo);
+      } else if (devplenoatributo.equals("senha")) {
+       db.devplenoList.get(i).setSenha(devplenovaloratributo);
+      } else if (devplenoatributo.equals("cel")) {
+       db.devplenoList.get(i).setCel(devplenovaloratributo);
+      }
      }
     }
-
     break;
 
    case "4":
-    System.out.println("Nome do Dev Júnior a ser deletado: ");
+    System.out.println("Nome do Dev Júnior a ser editado: ");
     String devjrnome = scan.nextLine();
+    System.out.println("Atributo do Dev Júnior a ser editado: ");
+    String devjratributo = scan.nextLine();
+    System.out.println("Novo valor para " + devjratributo + ": ");
+    String devjrvaloratributo = scan.nextLine();
+
 
     for (int i = 0; i < db.devjrList.size(); i++) {
      if (db.devjrList.get(i).getNome().equals(devjrnome)) {
-      db.devjrList.remove(i);
-      break;
-
+      if (devjratributo.equals("nome")) {
+       db.devjrList.get(i).setNome(devjrvaloratributo);
+      } else if (devjratributo.equals("sobrenome")) {
+       db.devjrList.get(i).setSobreNome(devjrvaloratributo);
+      } else if (devjratributo.equals("salario")) {
+       db.devjrList.get(i).setSalario(Double.parseDouble(devjrvaloratributo));
+      } else if (devjratributo.equals("endereço")) {
+       db.devjrList.get(i).setEndereço(devjrvaloratributo);
+      } else if (devjratributo.equals("tel")) {
+       db.devjrList.get(i).setTel(devjrvaloratributo);
+      } else if (devjratributo.equals("cel")) {
+       db.devjrList.get(i).setCel(devjrvaloratributo);
+      } else if (devjratributo.equals("senha")) {
+       db.devjrList.get(i).setSenha(devjrvaloratributo);
+      } else if (devjratributo.equals("cel")) {
+       db.devjrList.get(i).setCel(devjrvaloratributo);
+      }
      }
     }
     break;
+
    case "9":
     this.menuinicial();
    default:
@@ -314,28 +384,28 @@ public class Menus {
 
    case "1":
     while (gerenteitr.hasNext()) {
-     Gerente gerente = (Gerente) gerenteitr.next();
-     System.out.println("-------------------------------------\nNome: " + gerente.getNome() + " " + gerente.getSobreNome() + "\nSalário: " + gerente.getSalario() + "\n-------------------------------------");
+     Gerente showgerente = (Gerente) gerenteitr.next();
+     System.out.println("-------------------------------------\nNome: " + showgerente.getNome() + " " + showgerente.getSobreNome() + "\nSalário: " + showgerente.getSalario() + "\n-------------------------------------");
     }
-   break;
+    break;
    case "2":
     while (supervisoritr.hasNext()) {
-     Supervisor supervisor = (Supervisor) supervisoritr.next();
-     System.out.println("-------------------------------------\nNome: " + supervisor.getNome() + " " + supervisor.getSobreNome() + "\nSalário: " + supervisor.getSalario() + "\n-------------------------------------");
+     Supervisor showsupervisor = (Supervisor) supervisoritr.next();
+     System.out.println("-------------------------------------\nNome: " + showsupervisor.getNome() + " " + showsupervisor.getSobreNome() + "\nSalário: " + showsupervisor.getSalario() + "\n-------------------------------------");
     }
-   break;
+    break;
    case "3":
     while (devplenoitr.hasNext()) {
-     DevPleno devpleno = (DevPleno) devplenoitr.next();
-     System.out.println("-------------------------------------\nNome: " + devpleno.getNome() + " " + devpleno.getSobreNome() + "\nSalário: " + devpleno.getSalario() + "\n-------------------------------------");
+     DevPleno showdevpleno = (DevPleno) devplenoitr.next();
+     System.out.println("-------------------------------------\nNome: " + showdevpleno.getNome() + " " + showdevpleno.getSobreNome() + "\nSalário: " + showdevpleno.getSalario() + "\n-------------------------------------");
     }
     break;
    case "4":
     while (devjritr.hasNext()) {
-     DevJr devjr = (DevJr) devjritr.next();
-     System.out.println("-------------------------------------\nNome: " + devjr.getNome() + " " + devjr.getSobreNome() + "\nSalário: " + devjr.getSalario() + "\n-------------------------------------");  
+     DevJr showdevjr = (DevJr) devjritr.next();
+     System.out.println("-------------------------------------\nNome: " + showdevjr.getNome() + " " + showdevjr.getSobreNome() + "\nSalário: " + showdevjr.getSalario() + "\n-------------------------------------");
     }
-  break;
+    break;
   }
  }
 }
