@@ -12,11 +12,7 @@ public abstract class Funcionario {
 	private String tel;
 	private String cel;
 	private String senha;
-	private static String senhadegestao = "secret";
 	protected List<String> dependentes;
-	protected boolean ocupado;
-	private String orientando;
-	private String atarefando;
 
 	public String getNome() {
 		return this.nome;
@@ -39,20 +35,8 @@ public abstract class Funcionario {
 	public String getSenha() {
 		return this.senha;
 	}
-	public static String getSenhadegestao() {
-		return senhadegestao;
-	}
 	public double getSalario() {
 		return this.salario;
-	}
-	public String getOrientando() {
-		return this.orientando;
-	}
-	public String getAtarefando() {
-		return this.atarefando;
-	}
-	public boolean isOcupado() {
-		return ocupado;
 	}
 	public List<String> getDependentes() {
 		return dependentes;
@@ -81,15 +65,6 @@ public abstract class Funcionario {
 	}
 	public void setSalario(double salario) {
 		this.salario = salario;
-	}
-	public void setOrientando(String orientando) {
-		this.orientando = orientando;
-	}
-	public void setAtarefando(String atarefando) {
-		this.atarefando = atarefando;
-	}
-	public void setOcupado(boolean ocupado) {
-		this.ocupado = ocupado;
 	}
 	public void setDependentes(List<String> gerentedpendentesList) {
 		this.dependentes = gerentedpendentesList;
