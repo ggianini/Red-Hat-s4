@@ -20,6 +20,7 @@ public class Main {
 		devjr1.pedirAjuda(gerente1);
 		sup1.supervisionar(devjr1);
 		sup1.supervisionar(devpleno1);
+		devpleno2.orientarJr(devjr2);
 		
 		gerente1.setSenha("psg");
 		sys.aumentaSalario(devjr1, 300);

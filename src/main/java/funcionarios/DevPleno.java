@@ -23,7 +23,7 @@ public class DevPleno extends Dev implements Orientacao {
 
  public void orientarJr(DevJr devjr) {
 
-   System.out.println(this.getNome() + " está orientando: " + devjr.getNome());
+   System.out.println(this.getNome() + " " +this.getSobreNome()+ " está orientando: " + devjr.getNome() + " " +devjr.getSobreNome());
 
 }
 }
