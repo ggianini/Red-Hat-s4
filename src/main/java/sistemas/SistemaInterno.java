@@ -35,25 +35,25 @@ public class SistemaInterno {
 		public void aumentaSalario(Funcionario fun, double aumento) {
 			if(ok == true) {
 			double atual = fun.getSalario();
-			fun.setSalario(atual += aumento);
-			System.out.println("Salário alterado");
+			double novo = (atual += aumento);
+			System.out.println("Aumento de: "+aumento+" concedido! Salário de "+fun.getNome()+" "+fun.getSobreNome()+" alterado de: "+fun.getSalario()+" para: "+novo);
+			fun.setSalario(novo);
 			}
 			else {
-				System.out.println("Você não fez login()");
+				System.out.println("Não é possivel aumentar o salário de: "+fun.getNome()+" "+fun.getSobreNome()+" pois você não fez login()");
 			}
 		}
 		
 		public void concedeBonus(Funcionario fun, double bonus) {
 			if(ok == true) {
 			double atual = fun.getSalario();
-			System.out.println("Salário alterado");
-			System.out.println("Salário Inicial: "+fun.getSalario());
-			fun.setSalario(atual * 0.01 * bonus);
-			System.out.println("Bônus Concedido: "+bonus);
-			System.out.println("Salário Atual: "+fun.getSalario());
+			double novo = (atual +(atual * 0.01 * bonus));
+			System.out.println("Bônus de: "+bonus+"% concedido! Salário de "+fun.getNome()+" "+fun.getSobreNome()+" alterado de: "+fun.getSalario()+" para: "+novo);
+			fun.setSalario(novo);
 			}
 			else {
-				System.out.println("Você não fez login()");
+				System.out.println("Não é possivel gerar bônus para: "+fun.getNome()+" "+fun.getSobreNome()+" pois você não fez login()");
 			}
+
 		}
 }
