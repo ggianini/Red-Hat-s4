@@ -3,7 +3,7 @@ package funcionarios;
 import java.util.List;
 
 public abstract class Funcionario {
-	
+
 	private String nome;
 	private String sobreNome;
 	private double salario;
