@@ -9,7 +9,7 @@ public class Main {
 		Menus menu = new Menus();
 		menu.menuinicial();
 
-		SistemaInterno sys = new SistemaInterno();
+	/*	SistemaInterno sys = new SistemaInterno();
 		Gerente gerente1 = new Gerente("Neymar", "Jr", 12000);
 		Supervisor sup1 = new Supervisor("Cristiano", "Ronaldo", 7000);
 		DevPleno devpleno1 = new DevPleno("Luis", "Suárez", 5000);
@@ -27,7 +27,7 @@ public class Main {
 		sys.login(gerente1);
 		sys.aumentaSalario(devjr1, 300);
 		sys.concedeBonus(devjr2, 30);
-
+*/
 	}
 }
 

@@ -118,7 +118,7 @@ public class Menus {
 	public void painelbuscar() {
 		System.out.println("Qual o cargo do Funcionário?");
 		System.out.println("1 - Buscar Gerente");
-		System.out.println("2 - Buscar Supervisore");
+		System.out.println("2 - Buscar Supervisor");
 		System.out.println("3 - Buscar Dev Pleno");
 		System.out.println("4 - Buscar Dev Júnior");
 		System.out.println("9 - Voltar");
